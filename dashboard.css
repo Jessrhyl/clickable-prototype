@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* dashboard */
+div.dashboard_header{
+    background-color: rgb(83, 20, 20);
+    color: white;
+}
+div.dashboard_header a{
+    color: white;
+    text-decoration: none;
+}
+div.dashboard_header .logoff{
+    text-align: right;
+    padding-top: 10px;
+}
+div.dashboard_nav h3{
+    padding-top: 10px;
+}
+div.dashboard_nav h3 a{
+    padding-right: 50px;
+}
+div.dashboard_nav h3 a:hover, div.dashboard_header .logoff a:hover{
+    text-decoration: underline;
+}
+/* orders */
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+div.orders{
+    margin-top: 20px;
+}
+div.orders .filter{
+    margin: 0px 0px 5px 0px;
+}
+div.select_status_sort{
+    text-align: right;
+}
+div.select_status_sort select{
+    padding: 5px;
+}
+div.table{
+    width: 100%;
+}
+div.table table{
+    border-collapse: collapse;
+}
+div.table table tr, div.table table td, div.table table th{
+    border: 1px solid black;
+    padding: 5px;
+}
+div.table tr:nth-child(odd){
+    background-color: rgb(148, 148, 148);
+}
+div.table tr:nth-child(1){
+    background-color: rgb(94, 94, 94);
+}
+div.page_nav_bottom{
+    text-align: center;
+}
+div.page_nav_bottom a{
+    margin: 0px 10px;
+    text-decoration: none;
+}
+
+/* order details */
+div.order_details{
+    margin-top: 20px;
+}
+div.order_details section{
+    border: 1px solid black;
+    padding: 5px;
+}
+div.order_details table{
+    border-collapse: collapse;
+    width: 100%;
+}
+div.order_details tr, div.order_details table td, div.order_details table th{
+    border: 1px solid black;
+    padding: 5px;
+}
+div.order_details tr:nth-child(odd){
+    background-color: rgb(148, 148, 148);
+}
+div.order_details tr:nth-child(1){
+    background-color: rgb(94, 94, 94);
+}
+div.order_details .item_price_summary {
+    margin: 20px 0 0 0;
+}
+div.order_details .item_price_summary {
+    margin: 20px 0 0 0;
+}
+div.order_details .order_status p{
+    border: 2px solid  black;
+    padding: 0 0 0 10px;
+    background-color: greenyellow;
+}
+div.order_details p span{
+    font-weight: bolder;
+}
+div.order_details .price_breakdown {
+    text-align: right;
+    border: 2px solid  black;
+}

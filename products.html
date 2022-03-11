@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/19f1d03022.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dashboard.css">
+    <script>
+        $(document).ready(function(){
+            $("select > option").hover(function(e){
+                console.log(e.target.id);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row dashboard_header">
+            <div class="col-sm-3">
+                <h1>Dojo eCommerce</h1>
+            </div>
+            <div class="col-sm-3 dashboard_nav">
+                <h3><a href="orders.html">Orders</a><a href="products.html">Products</a></h3>
+            </div>
+            <div class="col-sm-6 logoff">
+                <h3><a href="login.html">Log off</a></h3>
+            </div>
+        </div>
+    </div>
+    <div class="container orders">
+        <form action="" method="POST">
+            <div class="row filter ">
+                <div class="col-sm-3">
+                    <form action="" method="POST">
+                        <div class="has-search">
+                            <span class="fas fa-search form-control-feedback"></span>
+                            <input type="text" class="form-control" name="orders_search" placeholder="Search">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-9 select_status_sort">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_item">
+                        Add new product
+                      </button>
+                </div> 
+            </div>
+        </form>
+        <div class="row table mx-auto">
+            <table> 
+                <tr>
+                    <th>Picture</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Inventory Count</th>
+                    <th>Sold</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td><img src="dasda"></td>
+                    <td>1</td>
+                    <td>T-shirt</td>
+                    <td>123</td>
+                    <td>1000</td>
+                    <td><span id='hover_item'><a href="#" data-bs-toggle="modal" data-bs-target="#update_item">edit</a>&nbsp;<a href="delete">delete</i></a></span></td>
+                </tr>
+                <tr>
+                    <td><img src="dasda"></td>
+                    <td>1</td>
+                    <td>T-shirt</td>
+                    <td>123</td>
+                    <td>1000</td>
+                    <td><span id='hover_item'><a href="#" data-bs-toggle="modal" data-bs-target="#update_item">edit</a>&nbsp;<a href='delete'>delete</i></a></span></td>
+                </tr>
+                <tr>
+                    <td><img src="dasda"></td>
+                    <td>1</td>
+                    <td>T-shirt</td>
+                    <td>123</td>
+                    <td>1000</td>
+                    <td><span id='hover_item'><a href="#" data-bs-toggle="modal" data-bs-target="#update_item">edit</a>&nbsp;<a href='delete'>delete</i></a></span></td>
+                </tr>
+                <tr>
+                    <td><img src="dasda"></td>
+                    <td>1</td>
+                    <td>T-shirt</td>
+                    <td>123</td>
+                    <td>1000</td>
+                    <td><span id='hover_item'><a href="#" data-bs-toggle="modal" data-bs-target="#update_item">edit</a>&nbsp;<a href='delete'>delete</i></a></span></td>
+                </tr>
+                <tr>
+                    <td><img src="dasda"></td>
+                    <td>1</td>
+                    <td>T-shirt</td>
+                    <td>123</td>
+                    <td>1000</td>
+                    <td><span id='hover_item'><a href="#" data-bs-toggle="modal" data-bs-target="#update_item">edit</a>&nbsp;<a href='delete'>delete</i></a></span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="row page_nav_bottom mx-auto">
+            <div class="col">
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+            </div>
+        </div>
+    </div>
+    <!-- New Item Modal -->
+    <div class="modal" id="add_item">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Add New Product</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+      
+            <!-- Modal body -->
+            <form action="" method="POST">
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="name" class="col-sm-2 col-form-label">Name</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="description" class="col-sm-2 col-form-label">Description</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" id="description" name="description"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="categories" class="col-sm-2 col-form-label">Categories</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <select name="category">
+                                <option selected>&nbsp;</option>
+                                <option id="1">Hat</option>
+                                <option id="2">Mug</option>
+                                <option id="3">Pant</option>
+                                <option id="4">Key Chain</option>
+                                <option id="5">Belt</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="new_category" name="new_category" placeholder="or add new category">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="image" class="col-sm-2 col-form-label">Images</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="file" class="form-control" id="image" name="image">
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <div class="form-group row">
+                        <div class="col-sm">
+                            <input type="submit"  class="btn btn-success" value="Add">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+          </div>
+        </div>
+    </div>
+    <!-- Update Item Modal -->
+    <div class="modal" id="update_item">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Edit Product ID - 1</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+      
+            <!-- Modal body -->
+            <form action="" method="POST">
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="name" class="col-sm-2 col-form-label">Name</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="description" class="col-sm-2 col-form-label">Description</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" id="description" name="description"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="categories" class="col-sm-2 col-form-label">Categories</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <select name="category">
+                                <option selected>&nbsp;</option>
+                                <option id="1">Hat</option>
+                                <option id="2">Mug</option>
+                                <option id="3">Pant</option>
+                                <option id="4">Key Chain</option>
+                                <option id="5">Belt</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="new_category" name="new_category" placeholder="or add new category">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="image" class="col-sm-2 col-form-label">Images</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="file" class="form-control" id="image" name="image">
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <div class="form-group row">
+                        <div class="col-sm">
+                            <input type="submit"  class="btn btn-success" value="Add">
+                            <a href="#" class="btn btn-info" role="button" data-bs-toggle="button">Preview</a>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

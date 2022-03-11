@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+/* login */
+.login {
+    position: relative;
+}
+.login input{
+    margin-bottom: 10px;
+}
+.login input[type~='submit']{
+    position: absolute;
+    right: 0;
+}
+/* products */
+.header{
+    background-color: black;
+    color: white;
+}
+.header h3{
+    margin-top: 5px;
+    text-align: right;
+}
+.header h3 a{
+    color: white;
+    text-decoration: none;
+}
+div.product{
+    margin-top: 10px;
+}
+div.filter form{
+    margin-bottom: 20px
+}
+ul.categories li{
+    list-style: none;
+}
+ul.categories li a{
+    text-decoration: none;
+    color: black;
+}
+ul.categories li a:hover{
+    text-decoration: none;
+    color: rgb(55, 87, 228);
+}
+.page_nav, .sort{
+    text-align: right;
+}
+div.product_thumbnail div{
+    border: 1px solid black;
+    margin: 20px;
+    width: auto;
+    height: auto;
+}
+div.product_thumbnail div h5{
+    text-align: right;
+}
+.page_nav_bottom div.col{
+    margin: 0px 20px 20px 0px;
+    text-align: center;
+}
+.page_nav_bottom a{
+    margin-right: 20px;
+}
+/* item page */
+div.item_description{
+    font-size: 1.2em;
+}
+div.similar_product_thumbnail div.item{
+    margin: 16px;
+    border: 1px solid black;
+    height: auto;
+    width: auto;
+}
+div.similar_product_thumbnail div.item img{
+    height: 200px;
+    width: auto;
+    padding: 0;
+}
+div.similar_product_thumbnail div.item h5{
+    text-align: right;
+}
+/* cart page */
+div.cart{
+    margin-top: 20px;
+}
+div.cart table{
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.4em;
+}
+div.cart tr, div.cart th, div.cart td{
+    border: 1px solid black;
+}
+div.cart tr:nth-child(odd){
+    background-color: rgb(148, 148, 148);
+}
+div.cart tr:nth-child(1){
+    background-color: rgb(94, 94, 94);
+}
+div.cart td, div.cart th{
+    padding: 10px;
+}
+div.cart td span#hover_item a{
+    color: rgb(5, 63, 255);
+    margin: 0 20px 0 20px; 
+}
+div.cart td span#hover_item a{
+    color: rgb(0, 0, 0);
+    margin: 0 20px 0 20px; 
+}   
+div.cart td span#hover_item a:hover{
+    color: rgb(5, 63, 255);
+    margin: 0 20px 0 20px; 
+}
+div.cart_nav, div.cart_total{
+    text-align: right;
+}
+div.cart_nav button{
+    padding: 5px;
+    background-color: greenyellow;
+}
+div.cart_nav button a:hover{
+    color: red;
+}
+div.card_info{
+    margin-top: 20px;
+}
+div.cart input[value~='Pay']{
+    background-color: blue;
+    color: white;
+    
+}
+form#customer_details input{
+    margin: 5px 0px;
+}
